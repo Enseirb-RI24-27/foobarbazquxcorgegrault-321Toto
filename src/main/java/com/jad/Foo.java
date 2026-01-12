@@ -20,7 +20,15 @@ public class Foo {
     }
 
     public void setCorge(Corge corge) {
+        if (this.corge != null) {
+            this.corge.setFoo(null);
+        }
+
         this.corge = corge;
+
+        if (corge != null && corge.getFoo() != this) {
+            corge.setFoo(this);
+        }
     }
 
     public List<Grault> getGraults() {
