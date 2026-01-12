@@ -13,8 +13,6 @@ public class Foo {
     public Foo(Bar bar) {
         this.bar = bar;
         this.bazs = new ArrayList<>();
-        graults.add(new Grault(this));
-
     }
 
     public Corge getCorge() {
