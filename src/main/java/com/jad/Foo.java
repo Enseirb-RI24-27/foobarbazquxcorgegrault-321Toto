@@ -6,6 +6,7 @@ import java.util.List;
 public class Foo {
     List<Baz> bazs;
     Qux qux = new Qux();
+    
     Corge corge;
     List<Grault> graults = new ArrayList<>();
     private Bar bar;
