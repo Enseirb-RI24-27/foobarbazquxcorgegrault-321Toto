@@ -7,17 +7,39 @@ public class Foo {
     Bar bar;
     List<Baz> bazs;
     Qux qux = new Qux();
+    Corge corge;
     List<Grault> graults = new ArrayList<>();
+
+    public Foo() {
+        this.bar = new Bar();
+        this.bazs = new ArrayList<>();
+        this.corge = new Corge(this);
+        graults.add(new Grault(this));
+    }
+
+    public Foo(Bar bar) {
+        this.bar = bar;
+        this.bazs = new ArrayList<>();
+        this.corge = new Corge(this);
+        graults.add(new Grault(this));
+
+    }
+
+    public Corge getCorge() {
+        return this.corge;
+    }
+
+    public void setCorge(Corge corge) {
+        this.corge = corge;
+    }
 
     public List<Grault> getGraults() {
         return this.graults;
     }
 
-    public void addBaz(Baz baz){
+    public void addBaz(Baz baz) {
         bazs.add(baz);
     }
-
-
 
     public List<Baz> getBazs() {
         return this.bazs;
@@ -29,15 +51,5 @@ public class Foo {
 
     public Bar getBar() {
         return this.bar;
-    }
-
-    public Foo() {
-        this.bar = new Bar();
-        this.bazs = new ArrayList<>();
-    }
-
-    public Foo(Bar bar){
-        this.bar = bar;
-        this.bazs = new ArrayList<>();
     }
 }
