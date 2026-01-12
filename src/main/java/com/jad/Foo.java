@@ -9,14 +9,7 @@ public class Foo {
     private Qux qux = new Qux();
     private List<Baz> bazs;
     private Bar bar;
-
-    public Foo() {
-        this.bar = new Bar();
-        this.bazs = new ArrayList<>();
-        this.corge = new Corge(this);
-        graults.add(new Grault(this));
-    }
-
+    
     public Foo(Bar bar) {
         this.bar = bar;
         this.bazs = new ArrayList<>();
