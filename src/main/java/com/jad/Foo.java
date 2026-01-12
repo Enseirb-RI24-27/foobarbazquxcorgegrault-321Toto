@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Foo {
-    Bar bar;
     List<Baz> bazs;
     Qux qux = new Qux();
     Corge corge;
     List<Grault> graults = new ArrayList<>();
+    private Bar bar;
 
     public Foo() {
         this.bar = new Bar();
