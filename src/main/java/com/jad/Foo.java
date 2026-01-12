@@ -7,6 +7,17 @@ public class Foo {
     Bar bar;
     List<Baz> bazs;
     Qux qux = new Qux();
+    List<Grault> graults = new ArrayList<>();
+
+    public List<Grault> getGraults() {
+        return this.graults;
+    }
+
+    public void addBaz(Baz baz){
+        bazs.add(baz);
+    }
+
+
 
     public List<Baz> getBazs() {
         return this.bazs;
@@ -22,6 +33,11 @@ public class Foo {
 
     public Foo() {
         this.bar = new Bar();
+        this.bazs = new ArrayList<>();
+    }
+
+    public Foo(Bar bar){
+        this.bar = bar;
         this.bazs = new ArrayList<>();
     }
 }
