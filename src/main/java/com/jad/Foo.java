@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Foo {
-    Qux qux = new Qux();
-    Corge corge;
-    List<Grault> graults = new ArrayList<>();
+    private Corge corge;
+    private List<Grault> graults = new ArrayList<>();
+    private Qux qux = new Qux();
     private List<Baz> bazs;
     private Bar bar;
 
