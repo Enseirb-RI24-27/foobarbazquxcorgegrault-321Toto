@@ -6,7 +6,7 @@ import java.util.List;
 public class Foo {
     List<Baz> bazs;
     Qux qux = new Qux();
-    
+
     Corge corge;
     List<Grault> graults = new ArrayList<>();
     private Bar bar;
@@ -36,6 +36,10 @@ public class Foo {
 
     public List<Grault> getGraults() {
         return this.graults;
+    }
+
+    public void addGrault() {
+        graults.add(new Grault(this));
     }
 
     public void addBaz(Baz baz) {
